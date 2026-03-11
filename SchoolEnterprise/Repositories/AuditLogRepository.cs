@@ -1,0 +1,1 @@
+using SchoolEnterprise.Models.Domain; using SchoolEnterprise.Services; namespace SchoolEnterprise.Repositories; public class AuditLogRepository(XmlStorageService storage) : BaseXmlRepository<AuditLogEntry>(storage){ protected override string FileName=>"audit-log.xml"; public void Add(AuditLogEntry i){var a=GetAll();a.Add(i);SaveAll(a);} }

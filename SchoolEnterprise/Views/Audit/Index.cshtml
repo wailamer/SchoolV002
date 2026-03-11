@@ -1,0 +1,1 @@
+@model IEnumerable<AuditLogEntry><div class="card"><h2>سجل العمليات</h2><table>@foreach(var a in Model){<tr><td>@a.CreatedAt</td><td>@a.Action</td><td>@a.Details</td><td>@a.Username</td></tr>}</table></div>

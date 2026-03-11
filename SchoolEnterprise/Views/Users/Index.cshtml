@@ -1,0 +1,1 @@
+@model IEnumerable<AppUser><div class="card"><a asp-action="Create">إضافة</a><table>@foreach(var u in Model){<tr><td>@u.Username</td><td>@u.Role</td><td><a asp-action="Edit" asp-route-id="@u.UserId">تعديل</a></td></tr>}</table></div>

@@ -1,0 +1,2 @@
+using Microsoft.AspNetCore.Mvc; using SchoolEnterprise.Helpers; using SchoolEnterprise.Models.Domain; using SchoolEnterprise.Repositories;
+namespace SchoolEnterprise.Controllers; [RoleGuard("Admin")] public class SettingsController(SchoolSettingsRepository repo):Controller{ [HttpGet] public IActionResult Index()=>View(repo.Get()??new SchoolSettings()); [HttpPost] public IActionResult Index(SchoolSettings s){repo.Save(s); return RedirectToAction(nameof(Index));}}

@@ -1,0 +1,1 @@
+using Microsoft.AspNetCore.Mvc; using SchoolEnterprise.Helpers; namespace SchoolEnterprise.Controllers; [RoleGuard("Admin","Secretary","Teacher")] public class ClassReportsController:Controller{ public IActionResult Index()=>View(); }

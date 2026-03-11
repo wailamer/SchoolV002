@@ -1,0 +1,1 @@
+@model IEnumerable<ClassRoom><div class="card"><a asp-action="Create">إضافة</a><table>@foreach(var t in Model){<tr><td>@t.Grade - @t.Section</td><td><a asp-action="Students" asp-route-id="@t.ClassRoomId">طلاب</a> <a asp-action="Edit" asp-route-id="@t.ClassRoomId">تعديل</a></td></tr>}</table></div>

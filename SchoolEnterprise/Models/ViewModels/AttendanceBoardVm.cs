@@ -1,0 +1,1 @@
+using System.Collections.Generic; namespace SchoolEnterprise.Models.ViewModels; public class AttendanceBoardVm { public int ClassRoomId { get; set; } public DateTime Date { get; set; } = DateTime.Today; public List<AttendanceStudentRowVm> Students { get; set; } = new(); }
