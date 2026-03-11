@@ -1,0 +1,2 @@
+@model UserCreateVm
+<div class="card"><form method="post"><input asp-for="Username"/><input asp-for="Password"/><input asp-for="FullName"/><select asp-for="Role" asp-items="Html.GetEnumSelectList<UserRole>()"></select><button>حفظ</button></form></div>

@@ -1,0 +1,2 @@
+@model List<StudentRecord>
+<div class="card"><table><tr><th>السجل</th><th>الحالة</th></tr>@foreach(var r in Model){<tr><td>@r.StudentRecordId</td><td>@r.Status</td></tr>}</table></div>
