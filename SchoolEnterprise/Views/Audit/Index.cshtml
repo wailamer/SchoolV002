@@ -1,0 +1,1 @@
+@model List<AuditLogEntry><table><tr><th>العملية</th><th>المستخدم</th><th>الوصف</th><th>الوقت</th></tr>@foreach(var a in Model){<tr><td>@a.Action</td><td>@a.UserName</td><td>@a.Description</td><td>@a.CreatedAt</td></tr>}</table>
