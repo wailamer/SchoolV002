@@ -1,0 +1,2 @@
+@model AppUser
+<div class="card"><form method="post"><input type="hidden" asp-for="UserId"/><input asp-for="Username"/><input asp-for="Password"/><input asp-for="FullName"/><select asp-for="Role" asp-items="Html.GetEnumSelectList<UserRole>()"></select><button>تحديث</button></form></div>

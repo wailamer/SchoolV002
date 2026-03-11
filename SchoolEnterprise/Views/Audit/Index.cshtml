@@ -1,0 +1,2 @@
+@model List<AuditLogEntry>
+<div class="card"><table><tr><th>الوقت</th><th>المستخدم</th><th>العملية</th><th>التفاصيل</th></tr>@foreach(var a in Model){<tr><td>@a.Timestamp</td><td>@a.Username</td><td>@a.Action</td><td>@a.Details</td></tr>}</table></div>

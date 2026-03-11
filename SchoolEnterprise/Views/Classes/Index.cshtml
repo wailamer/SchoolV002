@@ -1,0 +1,2 @@
+@model List<ClassRoom>
+<div class="card"><a asp-action="Create">إضافة</a><table><tr><th>الصف</th><th>الشعبة</th><th></th></tr>@foreach(var s in Model){<tr><td>@s.Grade</td><td>@s.Section</td><td><a asp-action="Students" asp-route-id="@s.ClassRoomId">طلاب</a> <a asp-action="Edit" asp-route-id="@s.ClassRoomId">تعديل</a></td></tr>}</table></div>

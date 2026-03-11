@@ -1,0 +1,2 @@
+@model StudentRegistration
+<div class="card"><h3>@Model?.FirstName @Model?.LastName</h3><p>الكود الوزاري: @Model?.MinistryCode</p><p>الرقم العام: @Model?.GeneralRegisterNumber</p><a asp-controller="Reports" asp-action="PrimaryReport" asp-route-studentId="@Model?.StudentId">جلاء</a></div>

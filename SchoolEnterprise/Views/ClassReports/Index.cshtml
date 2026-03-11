@@ -1,0 +1,2 @@
+@model List<ClassReportRowVm>
+<div class="card"><h3>كشف صف</h3><table><tr><th>الطالب</th><th>المجموع</th><th>النسبة</th><th>النتيجة</th></tr>@foreach(var r in Model){<tr><td>@r.StudentName</td><td>@r.Total</td><td>@r.Percentage</td><td>@r.Result</td></tr>}</table></div>

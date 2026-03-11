@@ -1,0 +1,2 @@
+@model List<AppUser>
+<div class="card"><a asp-action="Create">إضافة</a><table><tr><th>اسم المستخدم</th><th>الدور</th><th></th></tr>@foreach(var u in Model){<tr><td>@u.Username</td><td>@u.Role</td><td><a asp-action="Edit" asp-route-id="@u.UserId">تعديل</a> <a asp-action="Delete" asp-route-id="@u.UserId">حذف</a></td></tr>}</table></div>

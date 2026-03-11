@@ -1,0 +1,2 @@
+@model PrimaryReportVm
+<div class="card"><h2>كشف الدرجات</h2><table><tr><th>المادة</th><th>الفصل</th><th>أنشطة</th><th>شفهي</th><th>وظائف</th><th>امتحان</th><th>المجموع</th><th>التقدير</th></tr>@foreach(var m in Model.SemesterOne.Concat(Model.SemesterTwo)){<tr><td>@m.SubjectId</td><td>@m.Semester</td><td>@m.Activities</td><td>@m.Oral</td><td>@m.Homework</td><td>@m.Exam</td><td>@m.Total</td><td>@m.GradeLetter</td></tr>}</table><p>النسبة النهائية: @Model.Percentage</p></div>

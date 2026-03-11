@@ -1,0 +1,9 @@
+@model LoginVm
+<div class="card" style="max-width:420px;margin:60px auto">
+<h2>تسجيل الدخول</h2>
+<form method="post">
+<input asp-for="Username" placeholder="اسم المستخدم" />
+<input asp-for="Password" type="password" placeholder="كلمة المرور" />
+<button type="submit">دخول</button>
+<div>@ViewBag.Error</div>
+</form></div>

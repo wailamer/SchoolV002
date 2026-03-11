@@ -1,0 +1,2 @@
+@model List<StudentRegistration>
+<div class="card"><a asp-action="Create">إضافة طالب</a><table><tr><th>الرقم العام</th><th>الاسم</th><th></th></tr>@foreach(var s in Model){<tr><td>@s.GeneralRegisterNumber</td><td>@s.FirstName @s.LastName</td><td><a asp-action="Details" asp-route-id="@s.StudentId">تفاصيل</a> | <a asp-action="Edit" asp-route-id="@s.StudentId">تعديل</a></td></tr>}</table></div>

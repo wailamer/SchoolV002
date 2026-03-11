@@ -1,0 +1,2 @@
+@model StudentRecord
+<div class="card"><form method="post"><input type="hidden" name="StudentRecordId" value="@Model?.StudentRecordId"/><input name="ClassRoomId" value="@Model?.ClassRoomId"/><input name="RollNumber" value="@Model?.RollNumber"/><textarea name="Notes">@Model?.Notes</textarea><button>حفظ</button></form></div>
