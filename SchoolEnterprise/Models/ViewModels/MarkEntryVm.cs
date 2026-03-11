@@ -1,0 +1,12 @@
+namespace SchoolEnterprise.Models.ViewModels;
+
+public class MarkEntryVm
+{
+    public int StudentRecordId { get; set; }
+    public int SubjectId { get; set; }
+    public int Semester { get; set; }
+    public decimal Activities { get; set; }
+    public decimal Oral { get; set; }
+    public decimal Homework { get; set; }
+    public decimal Exam { get; set; }
+}

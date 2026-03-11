@@ -1,0 +1,22 @@
+using Microsoft.AspNetCore.Mvc;
+using SchoolEnterprise.Helpers;
+using SchoolEnterprise.Models.Domain;
+using SchoolEnterprise.Models.ViewModels;
+using SchoolEnterprise.Repositories;
+using SchoolEnterprise.Services;
+
+namespace SchoolEnterprise.Controllers;
+
+[RoleGuard("Admin", "Teacher")]
+public class MarksController(MarkRepository marks, SequenceService seq, MarkCalculationService calc) : Controller
+{
+    public IActionResult Enter() => View(new MarkEntryVm());
+
+    [HttpPost]
+    public IActionResult Save(MarkEntryVm vm)
+    {
+        var result = calc.Calculate(vm.Activities, vm.Oral, vm.Homework, vm.Exam);
+        marks.Upsert(new StudentMark { MarkId = seq.Next("MarkId"), StudentRecordId = vm.StudentRecordId, SubjectId = vm.SubjectId, Semester = vm.Semester, Activities = vm.Activities, Oral = vm.Oral, Homework = vm.Homework, Exam = vm.Exam, Total = result.total, GradeText = result.grade });
+        return RedirectToAction(nameof(Enter));
+    }
+}

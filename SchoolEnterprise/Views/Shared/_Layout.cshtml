@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SchoolEnterprise</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<div class="topbar">SchoolEnterprise - <span>@Context.Session.GetString("UserName")</span></div>
+<div class="shell">
+    <aside class="sidebar">
+        <a asp-controller="Dashboard" asp-action="Index">لوحة التحكم</a>
+        <a asp-controller="Students" asp-action="Index">الطلاب</a>
+        <a asp-controller="Teachers" asp-action="Index">المعلمون</a>
+        <a asp-controller="Subjects" asp-action="Index">المواد</a>
+        <a asp-controller="Classes" asp-action="Index">الشعب</a>
+        <a asp-controller="Attendance" asp-action="Board">الغياب</a>
+        <a asp-controller="Marks" asp-action="Enter">العلامات</a>
+        <a asp-controller="Reports" asp-action="PrimaryReport" asp-route-studentId="1">الجلاء</a>
+        <a asp-controller="Import" asp-action="Index">الاستيراد</a>
+        <a asp-controller="Users" asp-action="Index">المستخدمون</a>
+        <a asp-controller="Settings" asp-action="Index">الإعدادات</a>
+        <a asp-controller="Audit" asp-action="Index">التدقيق</a>
+        <a asp-controller="Account" asp-action="Logout">خروج</a>
+    </aside>
+    <main class="content">@RenderBody()</main>
+</div>
+</body>
+</html>
